@@ -10,7 +10,6 @@ const addToCart = async (req, res) => {
             return res.status(404).json({ success: false, message: "User not found" });
         }
 
-        // Initialize cartData if it doesn't exist
         let cartData = userData.cartData || {};
 
         // Add item to cart
@@ -32,17 +31,14 @@ const addToCart = async (req, res) => {
 // Remove from user cart
 const removeFromCart = async (req, res) => {
     try {
-        // Fetch user data
         let userData = await userModel.findById(req.body.userId);
         
         if (!userData) {
             return res.status(404).json({ success: false, message: "User not found" });
         }
 
-        // Initialize cartData if it doesn't exist
         let cartData = userData.cartData || {};
 
-        // Remove item from cart
         if (cartData[req.body.itemId] > 0) {
             cartData[req.body.itemId] -= 1;
         }

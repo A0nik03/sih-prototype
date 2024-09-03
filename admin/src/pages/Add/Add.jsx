@@ -1,18 +1,19 @@
-import React, { useState } from 'react'
-import './Add.css'
+import React, { useState } from 'react';
+import './Add.css';
 import { assets, url } from '../../assets/assets';
 import axios from 'axios';
 import { toast } from 'react-toastify';
 
 const Add = () => {
 
-
     const [image, setImage] = useState(false);
     const [data, setData] = useState({
         name: "",
         description: "",
         price: "",
-        category: "Fruits"
+        quantity: "",
+        unit: "",
+        category: "Fruits"  // Ensure there's a default value
     });
 
     const onSubmitHandler = async (event) => {
@@ -27,28 +28,36 @@ const Add = () => {
         formData.append("name", data.name);
         formData.append("description", data.description);
         formData.append("price", Number(data.price));
-        formData.append("category", data.category);
+        formData.append("quantity", Number(data.quantity));
+        formData.append("unit", data.unit);
+        formData.append("category", data.category);  // Make sure category is correctly added
         formData.append("image", image);
-        const response = await axios.post(`${url}/api/food/add`, formData);
-        if (response.data.success) {
-            toast.success(response.data.message)
-            setData({
-                name: "",
-                description: "",
-                price: "",
-                category: data.category
-            })
-            setImage(false);
-        }
-        else {
-            toast.error(response.data.message)
+
+        try {
+            const response = await axios.post(`${url}/api/food/add`, formData);
+            if (response.data.success) {
+                toast.success(response.data.message);
+                setData({
+                    name: "",
+                    description: "",
+                    price: "",
+                    quantity: "",
+                    unit: "",
+                    category: "Fruits"  // Reset to default category if needed
+                });
+                setImage(false);
+            } else {
+                toast.error(response.data.message);
+            }
+        } catch (error) {
+            toast.error('Failed to add product');
         }
     }
 
     const onChangeHandler = (event) => {
         const name = event.target.name;
         const value = event.target.value;
-        setData(data => ({ ...data, [name]: value }))
+        setData(data => ({ ...data, [name]: value }));
     }
 
     return (
@@ -72,24 +81,31 @@ const Add = () => {
                 <div className='add-category-price'>
                     <div className='add-category flex-col'>
                         <p>Product category</p>
-                        <select name='category' onChange={onChangeHandler} >
+                        <select name='category' onChange={onChangeHandler} value={data.category}>
                             <option value="Fruits">Fruits</option>
                             <option value="Cereals">Cereals</option>
                             <option value="Dairy">Dairy</option>
                             <option value="Grains">Grains</option>
-                            <option value="Cake">Cake</option>
                             <option value="Vegetables">Vegetables</option>
                         </select>
                     </div>
                     <div className='add-price flex-col'>
                         <p>Product Price</p>
-                        <input type="Number" name='price' onChange={onChangeHandler} value={data.price} placeholder='25' />
+                        <input type="number" name='price' onChange={onChangeHandler} value={data.price} placeholder='25' required />
+                    </div>
+                    <div className='add-quantity flex-col'>
+                        <p>Quantity</p>
+                        <input type="number" name='quantity' onChange={onChangeHandler} value={data.quantity} placeholder='25' required />
+                    </div>
+                    <div className='add-unit flex-col'>
+                        <p>Unit</p>
+                        <input type="text" name='unit' onChange={onChangeHandler} value={data.unit} placeholder='KG' required />
                     </div>
                 </div>
-                <button type='submit' className='add-btn' >ADD</button>
+                <button type='submit' className='add-btn'>ADD</button>
             </form>
         </div>
     )
 }
 
-export default Add
+export default Add;

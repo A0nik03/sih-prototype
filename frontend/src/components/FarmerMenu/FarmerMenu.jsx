@@ -11,7 +11,7 @@ const FarmerMenu = ({ category }) => {
 
   return (
     <div className='farmer-menu' id='farmer-menu'>
-      <h2>Farmers Near You!</h2>
+      <p className='heading'>Nearby Farmers!</p>
       <div className='farmer-menu-list'>
         {filteredFarmers.map((farmer) => {
           if (category === "All" || category === farmer.category) {

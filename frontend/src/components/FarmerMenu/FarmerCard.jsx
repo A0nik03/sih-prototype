@@ -15,10 +15,9 @@ const FarmerCard = ({ farmer }) => {
 
   const defaulImage = "https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-855.jpg?t=st=1725366622~exp=1725370222~hmac=e8817b3b3de3b59564b1ee5d49f68df0061a51e8c609dc0161e00998ffc17cde&w=740";
 
-  // Use the provided image URL directly
   const profilePicUrl = profilePicture
     ? `${url}/images/${profilePicture.split('\\').join('/')}`
-    : defaulImage; // Fallback image
+    : defaulImage;
 
   return (
     <div className="farmer-card" onClick={handleClick}>
