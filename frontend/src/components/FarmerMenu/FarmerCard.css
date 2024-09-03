@@ -1,11 +1,22 @@
+.farmer-cards-container {
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0;
+  gap: 20px;
+}
+
 .farmer-card {
-  width: 100%;
+  width: 300px;
+  height: 400px;
   margin: auto;
   border-radius: 15px;
   box-shadow: 0px 0px 10px #00000015;
   padding: 20px;
   background-color: #fff;
   transition: 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .farmer-card:hover {
@@ -23,11 +34,11 @@
   height: 150px;
   object-fit: cover;
   display: block;
-  margin: 0 auto; /* Center image horizontally */
+  margin: 0 auto;
 }
 
 .farmer-card__name {
-  font-size: 10px;
+  font-size: 16px;
   margin-bottom: 10px;
   text-align: center;
 }
@@ -35,7 +46,6 @@
 .farmer-card__crops {
   margin-top: 10px;
 }
-
 
 .farmer-card__crops-container {
   display: flex;
