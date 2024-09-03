@@ -1,0 +1,109 @@
+.loader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 75%;
+  height: 100vh;
+  margin: auto;
+}
+
+.loaderchild {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  height: 50%;
+  background-color: wheat;
+  border-top-left-radius: 500px 100px;
+  border-top-right-radius: 230px 330px;
+  border-bottom-left-radius: 230px 330px;
+  border-bottom-right-radius: 500px 100px;
+}
+
+.oneline {
+  width: 50%;
+  /* animation: fadeInOut 3.5s ease-in-out forwards; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  line-height: 0.1;
+}
+.counting-num{
+  width: 2vw;
+}
+.twoline {
+  width: 53%;
+  /* animation: fadeInOut 3.5s ease-in-out forwards; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.threeline {
+  width: 50%;
+  /* animation: fadeInOut 3.5s ease-in-out forwards; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fourline {
+  width: 50%;
+  /* animation: fadeInOut 3.5s ease-in-out forwards; */
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  line-height: 0.2;
+}
+.oneline h1 {
+  font-size: 4vw;
+  color: #D2691E;
+  margin-right: 1vw;
+}
+.oneline h3 {
+  font-size: 1vw;
+  color: #130801;
+}
+.twoline h1 {
+  font-size: 6.8vw;
+  color: #13902e;
+}
+.twoline h2 {
+  font-size: 2vw;
+  color: transparent;
+  -webkit-text-stroke: 1px #D2691E;
+  color: #D2691E;
+  animation: blink 1.1s ease-in-out infinite; /* Reduced duration to 0.5s and made it infinite */
+}
+.fourline h1 {
+  font-size: 4vw;
+  color: #D2691E;
+}
+
+@keyframes fadeInOut {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes blink {
+
+  0%{
+    opacity: 0;
+  }
+  47%{
+    opacity: 1;
+  }
+
+  53% {
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}

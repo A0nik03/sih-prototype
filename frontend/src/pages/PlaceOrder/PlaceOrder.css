@@ -1,0 +1,168 @@
+/* Background and full-page settings for the PlaceOrder component */
+.place-order-page {
+    background: linear-gradient(135deg, #80e4ef, #035555); /* Warm orange-pink gradient */
+    min-height: 100vh; /* Full viewport height */
+    display: flex; /* Center form */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    padding: 20px; /* Padding for breathing space */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Form container styling */
+.place-order {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px;
+}
+
+/* Column styling for form sections */
+.place-order-left,
+.place-order-right {
+    flex: 1 1 300px; /* Make responsive for smaller screens */
+    margin: 10px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    min-width: 280px; /* Minimum width for smaller screens */
+}
+
+/* Input and button styling */
+.place-order-left input,
+.place-order-right input,
+.place-order-right button {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 12px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    outline: none;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+.place-order-left input::placeholder,
+.place-order-right input::placeholder {
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.place-order-right button {
+    background-color: #4d96b7; /* Coral color for button */
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.place-order-right button:hover {
+    background-color:#4d96b7; /* Darker coral on hover */
+    transform: translateY(-2px);
+}
+
+/* Payment and cart styling */
+.cart-total, .payment {
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.payment-option:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+.payment-option.selected {
+    background: linear-gradient(135deg, #ff7f50, #ff6347); /* Coral gradient for selected option */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.payment-option img {
+    margin-right: 10px;
+}
+
+.payment-option p {
+    margin: 0;
+    color: inherit;
+}
+
+/* Delivery information styling */
+.delivery-info {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 12px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 8px; /* Rounded edges */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.delivery-info:hover {
+    background: rgba(255, 255, 255, 0.35);
+    transform: translateY(-2px);
+}
+
+.delivery-info.selected {
+    background: linear-gradient(135deg, #50fff3, #00c9ff); /* Coral gradient for selected option */
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: none;
+}
+
+.delivery-info img {
+    margin-right: 10px;
+}
+
+.delivery-info p {
+    margin: 0;
+    color: inherit;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .place-order {
+        flex-direction: column; /* Stack form sections on smaller screens */
+    }
+
+    .place-order-left,
+    .place-order-right {
+        margin: 10px 0; /* Adjust margin for stacked layout */
+        width: 100%; /* Full width on smaller screens */
+    }
+}
+
+
+
+

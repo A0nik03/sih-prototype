@@ -1,0 +1,166 @@
+/* Base styles for the login page */
+.login-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #F5F5F5; /* Light, neutral background for a clean look */
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.login-page::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("https://images.unsplash.com/photo-1506748686214e9df14c4f5e8b43ef1fbe4b53a1f1f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDE5fHxkYXJrJTIwY2FydHx8MHx8fDE2NTY3Nzc3Nz&ixlib=rb-1.2.1&q=80&w=1080") no-repeat center center;
+    background-size: cover;
+    z-index: -1;
+    opacity: 0.6;
+}
+
+.login-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+    color: #3A6A40; /* Deep green for a natural feel */
+}
+
+.login-page-header img {
+    cursor: pointer;
+}
+
+.login-page-header h1 {
+    font-size: 28px;
+    flex-grow: 1;
+    text-align: center;
+    font-family: 'Poppins', sans-serif; /* Clean and readable font */
+    color: #3A6A40; /* Deep green for headings */
+}
+
+.login-page-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.login-page-inputs {
+    width: 100%;
+}
+
+.login-page-inputs input,
+.login-page-inputs select {
+    width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #B0B0B0; /* Light gray border */
+    border-radius: 5px;
+    font-size: 16px;
+    background: #FFF; /* White background for inputs */
+    color: #333;
+}
+
+.login-page-inputs select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='7'%3E%3Cpath fill='%23999' d='M0 0l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px 7px;
+    padding-right: 30px;
+}
+
+.login-page-inputs select:focus {
+    outline: none;
+    border-color: #3A6A40; /* Deep green for focus */
+}
+
+.login-page-role {
+    width: 100%;
+    margin: 12px 0;
+}
+
+.login-page-role label {
+    margin-bottom: 5px;
+    color: #333;
+    display: block;
+    margin-left: 5px;
+}
+
+.login-page-form button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background-color: #4CAF50; /* Earthy green */
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 12px;
+    font-weight: 600; /* Slightly bolder text */
+}
+
+.login-page-form button:hover {
+    background-color: #45a049; /* Slightly darker green */
+}
+
+.login-page-condition {
+    display: flex;
+    align-items: center;
+    margin: 12px 0;
+    color: #333;
+    width: 100%;
+}
+
+.login-page-condition input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 24px;
+    height: 24px; 
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    margin-right: 12px;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page-condition input[type="checkbox"]:checked::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background-color: #4CAF50;
+    border-radius: 2px;
+}
+
+.login-page-condition label {
+    margin-left: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-page-form p {
+    margin-top: 15px;
+    color: #333;
+}
+
+.login-page-form p span {
+    color: #4CAF50;
+    cursor: pointer;
+    text-decoration: underline;
+}

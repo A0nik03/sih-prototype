@@ -1,0 +1,52 @@
+.parallax-section {
+    position: relative;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Hide overflow to contain the background */
+  }
+  
+  .parallax {
+    background-image: url('https://myfarmconnect.in/wp-content/uploads/2024/03/cow_bg.jpg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    color: #e3f7ed;
+    text-align: center;
+  }
+  
+  .parallax p {
+    font-size: 60px;
+    font-weight: 400;
+  }
+  
+  .top-shape,
+  .bottom-shape {
+    width: 100%;
+  }
+  
+  .top-shape {
+    position: absolute;
+    top: 0;
+  }
+
+  .bottom-shape {
+    position: absolute;
+    bottom: 0;
+  }
+  
+  @media only screen and (max-width: 1023px) {
+    .parallax p {
+      font-size: 30px;
+      padding-top: 10%;
+    }
+    .parallax-section {
+      height: 50vh;
+    }
+  }
+  

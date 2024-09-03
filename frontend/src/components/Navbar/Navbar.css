@@ -1,0 +1,201 @@
+/* Base styles for Navbar */
+.navbar {
+    padding: 20px 0;
+    display: flex;
+    margin-left: 20px;
+    margin-right: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(243, 227, 197);
+}
+
+.navbar .logo {
+    width: 150px;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: #4A773C; /* Earthy green color */
+    font-size: 18px;
+    font-family: 'Poppins', sans-serif; /* Updated to Poppins for a clean look */
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-menu .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #4A773C; /* Earthy green color */
+}
+
+.navbar-menu li {
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+}
+
+.navbar-menu li:hover {
+    color: #2E5A2F; /* Darker green for hover effect */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.navbar-right {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.navbar-search-icon {
+    position: relative;
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: #D5C5A8; /* Soft beige color */
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+}
+
+.navbar-right button {
+    background: #4A773C; /* Deep earthy green for standout */
+    color: #FFFFFF; /* White text for contrast */
+    font-size: 16px;
+    padding: 12px 30px; /* Increased padding for a more prominent button */
+    border-radius: 50px; /* Rounded button */
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease; /* Smooth transitions */
+    font-weight: 600; /* Slightly bolder text */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    border: none; /* Removed border */
+}
+
+.navbar-right button:hover {
+    background: #3A5A2F; /* Slightly darker green for hover */
+    transform: scale(1.05); /* Slightly enlarge button on hover */
+}
+
+.navbar-profile {
+    position: relative;
+}
+
+.navbar-profile-dropdown {
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile-dropdown li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-weight: 500; /* Slightly bolder text */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.navbar-profile-dropdown img {
+    width: 20px;
+}
+
+.navbar-profile-dropdown li:hover {
+    color: #2E5A2F; /* Darker green for hover effect */
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: #F1F8F4; /* Very light green for dropdown */
+    padding: 12px 25px;
+    border-radius: 4px;
+    border: 1px solid #4A773C; /* Earthy green border */
+    outline: 2px solid #E0F2E9; /* Light green outline */
+    list-style: none;
+}
+
+.navbar-profile hr {
+    background-color: #C0C0C0; /* Light gray for separator */
+    height: 1px;
+    border: none;
+}
+
+/* Container for icons */
+.navbar-icons-container {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between icons */
+    background-color: #E0F2E9; /* Light green background */
+    padding: 10px; /* Padding inside the container */
+    border-radius: 50px; /* Rounded shape */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Slight shadow for depth */
+}
+
+/* Individual icons */
+.navbar-icons-container img {
+    width: 24px; /* Size of the icons */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
+
+/* Hover effect for icons */
+.navbar-icons-container img:hover {
+    transform: scale(1.1); /* Slightly enlarge icon on hover */
+    filter: brightness(0.8); /* Slightly darken icon on hover */
+}
+
+/* Responsive styles */
+@media (max-width: 1050px) {
+    .navbar .logo {
+        width: 140px;
+    }
+
+    .navbar-menu {
+        gap: 20px;
+        font-size: 17px;
+    }
+
+    .navbar-right {
+        gap: 30px;
+    }
+
+    .navbar-right img {
+        width: 22px;
+    }
+
+    .navbar-right button {
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width: 900px) {
+    .navbar .logo {
+        width: 120px;
+    }
+
+    .navbar-menu {
+        gap: 15px;
+        font-size: 16px;
+    }
+
+    .navbar-right {
+        gap: 20px;
+    }
+
+    .navbar-right img {
+        width: 20px;
+    }
+
+    .navbar-right button {
+        font-size: 15px;
+        padding: 7px 20px;
+    }
+}
+
+@media (max-width: 750px) {
+    .navbar-menu {
+        display: none;
+    }
+}
