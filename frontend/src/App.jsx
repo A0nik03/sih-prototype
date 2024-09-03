@@ -1,4 +1,4 @@
-import {React, useState} from 'react';
+import React, { useState } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Home from './pages/Home/Home';
 import Footer from './components/Footer/Footer';
@@ -7,12 +7,11 @@ import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import MyOrders from './pages/MyOrders/MyOrders';
 import Verify from './pages/Verify/Verify';
-import FarmerMenu from './components/FarmerMenu/FarmerMenu';
 import LoginPage from './components/LoginPage/LoginPage';
 import { ToastContainer } from 'react-toastify';
-import ParallaxSection from './components/Parallax/Parallax';
 import Loader from './components/Loader/Loader'; 
 import 'react-toastify/dist/ReactToastify.css';
+import FarmerDetailPage from './components/FarmerDetailPage/FarmerDetailPage';
 
 const App = () => {
   const location = useLocation();
@@ -22,7 +21,7 @@ const App = () => {
     <>
       <ToastContainer />
       <div className='app'>
-      {loading ? (
+        {loading ? (
           <Loader setLoading={setLoading} />
         ) : (
           <>
@@ -34,13 +33,12 @@ const App = () => {
               <Route path='/myorders' element={<MyOrders />} />
               <Route path='/verify' element={<Verify />} />
               <Route path='/login' element={<LoginPage />} />
+              <Route path="/farmer/:id" element={<FarmerDetailPage />} />
             </Routes>
-            {location.pathname === '/' && <FarmerMenu />}
-            {location.pathname === '/'&& <ParallaxSection/>}
             <Footer />
           </>
         )}
-        </div>
+      </div>
     </>
   );
 };

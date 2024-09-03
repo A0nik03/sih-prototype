@@ -2,9 +2,7 @@
     height: 34vw;
     position: relative;
     overflow: hidden;
-    border-top-left-radius: 37px 140px;
-    border-top-right-radius: 230px 330px;
-    border-bottom-left-radius: 110px 19px;
+    border-bottom-left-radius: 500px 100px;
     border-bottom-right-radius: 500px 100px;
 }
 
@@ -22,7 +20,6 @@
     position: absolute;
     display: flex;
     flex-direction: column;
-    align-items: start;
     gap: 1.5vw;
     max-width: 50%;
     bottom: 10%;
@@ -31,6 +28,7 @@
 }
 
 .header-contents h2 {
+    align-self: center;
     font-weight: 500;
     color: white;
     font-size: max(4.5vw, 22px);
@@ -41,15 +39,6 @@
     font-size: 1vw;
 }
 
-.header-contents button {
-    border: none;
-    color: #747474;
-    font-weight: 500;
-    padding: 1vw 2.3vw;
-    background: white;
-    font-size: max(1vw, 13px);
-    border-radius: 50px;
-}
 
 @media (max-width: 1050px) {
     .header {

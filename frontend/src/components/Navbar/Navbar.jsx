@@ -25,7 +25,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar'>
-  <Link to='/'><img className='logo' src={assets.logo} alt="Logo" /></Link>
+  <Link to='/'><img className='logo' src = "./logo.png" alt="Logo" /></Link>
   <ul className="navbar-menu">
     <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>
     <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
@@ -36,7 +36,7 @@ const Navbar = () => {
     {userRole === 'admin' && (
       <button className='navbar-admin-button' onClick={handleAdminClick}>Admin</button>
     )}
-    <div className="navbar-icons-container">
+
       <div className="navbar-icon search-icon">
         <img src={assets.search_icon} alt="Search Icon" />
       </div>
@@ -68,7 +68,6 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </div>
   </div>
 </div>
 

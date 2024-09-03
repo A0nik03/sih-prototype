@@ -15,9 +15,9 @@ const ExploreMenu = ({ category, setCategory }) => {
 
     gsap.from(exploreMenuRef.current, {
       opacity: 0,
-      y: 50,
-      duration: 1.5,
-      ease: 'power3.out',
+      y: 30,
+      duration: 1.2,
+      ease: 'power2.out',
       scrollTrigger: {
         trigger: exploreMenuRef.current,
         start: 'top 80%',
@@ -29,11 +29,11 @@ const ExploreMenu = ({ category, setCategory }) => {
     exploreMenuItems.forEach((item, index) => {
       gsap.from(item, {
         opacity: 0,
-        scale: 0.5,
-        y: 50,
-        duration: 1,
-        delay: index * 0.2,
-        ease: 'back.out(1.7)',
+        scale: 0.8,
+        y: 30,
+        duration: 0.8,
+        delay: index * 0.1,
+        ease: 'expo.out',
         scrollTrigger: {
           trigger: item,
           start: 'top 90%',
@@ -43,20 +43,20 @@ const ExploreMenu = ({ category, setCategory }) => {
       });
 
       item.addEventListener('mouseenter', () => {
-        gsap.to(item, { scale: 1.1, duration: 0.3 });
+        gsap.to(item, { scale: 1.05, duration: 0.2 });
       });
 
       item.addEventListener('mouseleave', () => {
-        gsap.to(item, { scale: 1, duration: 0.3 });
+        gsap.to(item, { scale: 1, duration: 0.2 });
       });
     });
   }, []);
 
   return (
     <div className='explore-menu' id='explore-menu' ref={exploreMenuRef}>
-      <h1>Explore our menu</h1>
+      <h1>Explore Fresh Produce</h1>
       <p className='explore-menu-text'>
-        Choose from a diverse menu featuring a delectable array of dishes. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.
+        Discover a diverse selection of fresh produce and goods directly from local farmers. Support sustainable agriculture and enjoy high-quality products straight from the source.
       </p>
       <div className='explore-menu-list'>
         {menu_list.map((item, index) => (
@@ -72,16 +72,14 @@ const ExploreMenu = ({ category, setCategory }) => {
             <img
               src={item.menu_image}
               className={category === item.menu_name ? 'active' : ''}
-              alt=''
+              alt={item.menu_name}
             />
             <p>{item.menu_name}</p>
           </div>
         ))}
       </div>
-      <hr />
     </div>
   );
 };
 
 export default ExploreMenu;
-``

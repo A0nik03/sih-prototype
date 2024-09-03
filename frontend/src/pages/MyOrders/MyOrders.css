@@ -1,99 +1,88 @@
-/* My Orders page container */
 .my-orders {
-    background: linear-gradient(135deg, #80e4ef, #035555); /* Light teal-green gradient */
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     display: flex;
-    flex-direction: column; /* Stack title and content */
+    flex-direction: column;
     align-items: center;
-    justify-content: flex-start; /* Start from top */
+    justify-content: flex-start;
     padding: 20px;
     box-sizing: border-box;
     border-radius: 50px;
 }
 
-/* Orders container styling */
 .my-orders .container {
     display: flex;
-    flex-wrap: wrap; /* Make the orders wrap on smaller screens */
-    justify-content: center; /* Center the orders horizontally */
-    max-width: 1200px; /* Limit the width of the container */
-    width: 100%; /* Full width */
-    margin: 20px 0; /* Vertical margin */
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 20px 0;
 }
 
-/* Individual order styling */
 .my-orders-order {
     display: flex;
-    flex-direction: column; /* Stack order details vertically */
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    width: 280px; /* Fixed width for each order */
-    margin: 15px; /* Margin around each order */
+    width: 280px;
+    margin: 15px;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.2); /* Light transparent white */
-    border-radius: 15px; /* Rounded corners */
+    background-color: #E0F2E9;
+    border-radius: 15px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* Subtle border */
-    transition: transform 0.3s ease; /* Smooth transition */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: transform 0.3s ease;
 }
 
-/* Hover effect for each order */
 .my-orders-order:hover {
-    transform: translateY(-8px); /* Slight raise on hover */
+    transform: translateY(-8px);
 }
 
-/* Image inside each order */
 .my-orders-order img {
-    width: 40px; /* Fixed size for the icon */
-    height: 40px;
-    margin-bottom: 15px; /* Space between image and content */
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
 }
 
-/* Order details text styling */
 .my-orders-order p {
-    margin: 5px 0; /* Vertical margin between details */
-    color: #fff; /* White color for contrast */
-    font-size: 14px; /* Slightly smaller text */
-    text-align: center; /* Center-align text */
-    line-height: 1.4; /* Spacing between lines */
+    margin: 5px 0;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    line-height: 1.5;
 }
 
-/* Order status circle and text */
 .my-orders-order p span {
-    color: #ff6347; /* Coral color for status dot */
-    margin-right: 5px; /* Spacing between dot and text */
+    color: #ff6347;
+    margin-right: 5px;
 }
 
-/* Track Order button styling */
 .my-orders-order button {
-    padding: 10px 15px; /* Padding for button */
-    margin-top: 10px; /* Space above button */
-    background-color: #50fff3; /* Teal button */
-    color: #035555; /* Darker color text */
-    border: none; /* Remove default border */
-    border-radius: 5px; /* Rounded corners */
-    cursor: pointer; /* Pointer cursor on hover */
-    font-size: 14px; /* Standard font size */
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    padding: 12px 18px;
+    margin-top: 10px;
+    background-color: #50fff3;
+    color: #035555;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-/* Hover effect for button */
 .my-orders-order button:hover {
-    background-color: #ff6347; /* Darker coral on hover */
-    transform: translateY(-2px); /* Slight lift on hover */
+    background-color: #ff6347;
+    transform: translateY(-2px);
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
     .my-orders .container {
-        flex-direction: column; /* Stack orders vertically on smaller screens */
-        align-items: center; /* Center orders */
+        flex-direction: column;
+        align-items: center;
     }
 
     .my-orders-order {
-        width: 90%; /* Make orders take more space on smaller screens */
-        margin: 10px 0; /* Adjust vertical margin */
+        width: 90%;
+        margin: 10px 0;
     }
 }
