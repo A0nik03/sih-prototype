@@ -1,7 +1,6 @@
-/* Background and container styling for the Cart page */
 .cart {
-    background: linear-gradient(135deg, #f0f4f8, #d9e2ec); /* Light blue gradient */
-    min-height: 100vh; /* Full viewport height */
+    background: linear-gradient(135deg, #eaf4e8, #d0e2d7);
+    min-height: 100vh;
     padding: 20px;
     box-sizing: border-box;
     display: flex;
@@ -9,11 +8,10 @@
     align-items: center;
 }
 
-/* Cart items section styling */
 .cart-items {
     width: 100%;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -33,6 +31,7 @@
 .cart-items-title p {
     margin: 0;
     text-align: center;
+    color: #4A773C;
 }
 
 .cart-items-item {
@@ -52,7 +51,7 @@
 }
 
 .cart-items-remove-icon {
-    color: #ff6347;
+    color: #FF6F61;
     cursor: pointer;
     font-weight: bold;
     text-align: center;
@@ -64,7 +63,6 @@ hr {
     margin: 10px 0;
 }
 
-/* Bottom section styling */
 .cart-bottom {
     width: 100%;
     max-width: 1200px;
@@ -75,7 +73,7 @@ hr {
 
 .cart-total {
     width: 100%;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -84,6 +82,7 @@ hr {
 
 .cart-total h2 {
     margin-bottom: 15px;
+    color: #4A773C;
 }
 
 .cart-total-details {
@@ -94,14 +93,16 @@ hr {
 
 .cart-total-details p {
     margin: 0;
+    color: #4A773C;
 }
 
 .cart-total-details b {
     font-weight: bold;
+    color: #4A773C;
 }
 
 button {
-    background-color:#507f7c;
+    background-color: #4A773C;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -111,15 +112,14 @@ button {
 }
 
 button:hover {
-    background-color: #507f7c;
+    background-color: #2E5A2F;
     transform: translateY(-2px);
 }
 
-/* Promocode section styling */
 .cart-promocode {
     width: 100%;
     max-width: 1200px;
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -127,6 +127,7 @@ button:hover {
 
 .cart-promocode p {
     margin-bottom: 10px;
+    color: #4A773C;
 }
 
 .cart-promocode-input {
@@ -143,7 +144,7 @@ button:hover {
 }
 
 .cart-promocode-input button {
-    background-color: #507f7c;
+    background-color: #4A773C;
     color: white;
     border: none;
     padding: 10px;
@@ -153,6 +154,6 @@ button:hover {
 }
 
 .cart-promocode-input button:hover {
-    background-color:#507f7c;
+    background-color: #2E5A2F;
     transform: translateY(-2px);
 }

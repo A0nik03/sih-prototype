@@ -1,8 +1,5 @@
 .header-nav ul {
     list-style: none;
-}
-
-.header-nav > ul {
     margin: 0;
     padding: 0;
 }
@@ -29,7 +26,8 @@
 
 .header-nav .badge-number {
     position: absolute;
-    inset: -2px -5px auto auto;
+    top: -2px;
+    right: -5px;
     font-weight: normal;
     font-size: 12px;
     padding: 3px 6px;
@@ -44,19 +42,19 @@
 .header-nav .messages {
     position: absolute;
     right: 0;
-    top: 100%; /* Ensures dropdowns are positioned below their trigger */
-    margin-top: 10px; /* Adds space between dropdowns */
+    top: 100%;
+    margin-top: 10px;
 }
 
 .header-nav .notifications {
-    inset: 8px -15px auto auto !important;
+    right: -15px;
 }
 
 .header-nav .notifications .notification-item {
     display: flex;
     align-items: center;
     padding: 15px 10px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .header-nav .notifications .notification-item i {
@@ -81,17 +79,21 @@
 }
 
 .header-nav .messages {
-    inset: 8px -15px auto auto !important;
+    right: -15px;
 }
 
 .header-nav .messages .message-item {
+    display: flex;
+    align-items: center;
     padding: 15px 10px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .header-nav .messages .message-item img {
     margin: 0 20px 0 10px;
     max-height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 .header-nav .messages .message-item h4 {
@@ -127,7 +129,7 @@
 .header-nav .profile .dropdown-item {
     font-size: 14px;
     padding: 10px 15px;
-    transition: 0.3s;
+    transition: background-color 0.3s ease;
 }
 
 .header-nav .profile .dropdown-header span {
@@ -137,24 +139,17 @@
 .header-nav .profile .dropdown-item i {
     margin-right: 10px;
     font-size: 18px;
-    line-height: 0;
 }
 
 .header-nav .profile .dropdown-item:hover {
     background-color: #f6f9ff;
 }
-.messages .message-item img {
-    width: 40px; /* Adjust size as needed */
-    height: 40px; /* Adjust size as needed */
-    border-radius: 50%;
-    object-fit: cover; /* Ensures the image fills the container */
-  }
 
-  .messages .message-item a {
+.messages .message-item a {
     display: flex;
     align-items: center;
-  }
+}
 
-  .messages .message-item div {
-    margin-left: 10px; /* Adds spacing between image and text */
-  }
+.messages .message-item div {
+    margin-left: 10px;
+}

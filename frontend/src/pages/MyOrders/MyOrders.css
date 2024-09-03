@@ -6,7 +6,7 @@
     justify-content: flex-start;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 50px; 
 }
 
 .my-orders .container {
@@ -26,12 +26,12 @@
     width: 280px;
     margin: 15px;
     padding: 20px;
-    background-color: #E0F2E9;
+    background-color: #F0F8F0;
+    border: 1px solid #4A773C;
     border-radius: 15px;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
     transition: transform 0.3s ease;
 }
 
@@ -40,14 +40,15 @@
 }
 
 .my-orders-order img {
-    width: 60px;
-    height: 60px;
+    width: 90px;
+    height: 90px;
     margin-bottom: 15px;
+    border-radius: 8px;
 }
 
 .my-orders-order p {
     margin: 5px 0;
-    color: #fff;
+    color: #4A773C;
     font-size: 16px;
     text-align: center;
     line-height: 1.5;
@@ -61,8 +62,8 @@
 .my-orders-order button {
     padding: 12px 18px;
     margin-top: 10px;
-    background-color: #50fff3;
-    color: #035555;
+    background-color: #4A773C;
+    color: white;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -71,7 +72,7 @@
 }
 
 .my-orders-order button:hover {
-    background-color: #ff6347;
+    background-color: #2E5A2F;
     transform: translateY(-2px);
 }
 

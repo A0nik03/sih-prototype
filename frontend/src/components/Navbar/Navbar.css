@@ -63,7 +63,6 @@
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-
 .navbar-icon img {
     width: 24px; 
     height: auto;
@@ -88,15 +87,18 @@
 .navbar-right button {
     background: #E0F2E9;
     color: #4A773C;
-    font-size: 16px;
+    text-align: center;
+    font-size: 12px;
     padding: 12px 30px;
     border-radius: 50px;
-    width: 80px;
     cursor: pointer;
     transition: background 0.3s ease, transform 0.3s ease;
     font-weight: 600;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .navbar-right button:hover {
@@ -106,12 +108,14 @@
 
 .navbar-profile {
     position: relative;
+    display: flex;
 }
 
 .navbar-profile-dropdown {
     position: absolute;
     display: none;
     right: 0;
+    top: 100%;
     z-index: 1;
     background-color: #F1F8F4;
     padding: 12px 20px;
@@ -130,6 +134,10 @@
     cursor: pointer;
     font-weight: 500;
     transition: color 0.3s ease;
+}
+
+.navbar-profile img{
+    width: 30px;
 }
 
 .navbar-profile-dropdown img {
@@ -196,6 +204,7 @@
 
     .navbar-right button {
         padding: 8px 25px;
+        width: 80px; /* Adjust width for smaller screens */
     }
 }
 
@@ -220,6 +229,7 @@
     .navbar-right button {
         font-size: 15px;
         padding: 7px 20px;
+        width: 70px;
     }
 }
 
