@@ -1,9 +1,8 @@
 .farmer-menu {
     margin-top: 30px;
     padding: 20px;
-    background-color: #E2DAD6;
+    background-color: rgb(243, 227, 197);
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .farmer-menu h2 {

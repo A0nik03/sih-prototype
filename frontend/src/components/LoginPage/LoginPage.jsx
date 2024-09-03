@@ -71,21 +71,34 @@ const LoginPage = () => {
 
     const onLogin = async (e) => {
         e.preventDefault();
+        console.log("Data before submitting:", data);
     
-        const formData = new FormData();
-        for (const key in data) {
-            formData.append(key, data[key]);
+        let requestData;
+        let headers = {};
+    
+        if (currState === "Login") {
+            // Sending as JSON for login
+            requestData = {
+                email: data.email,
+                password: data.password,
+                role: role
+            };
+            headers['Content-Type'] = 'application/json';
+        } else {
+            // Sending as FormData for registration
+            const formData = new FormData();
+            for (const key in data) {
+                formData.append(key, data[key]);
+            }
+            formData.append('role', role);
+            requestData = formData;
+            headers['Content-Type'] = 'multipart/form-data';
         }
-        formData.append('role', role); // Add role to FormData
-        
+    
         const endpoint = currState === "Login" ? `${url}/api/user/login` : `${url}/api/user/register`;
     
         try {
-            const response = await axios.post(endpoint, formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
+            const response = await axios.post(endpoint, requestData, { headers });
     
             if (response.data.success) {
                 setToken(response.data.token);
