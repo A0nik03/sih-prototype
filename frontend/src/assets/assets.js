@@ -7,6 +7,10 @@ import menu_3 from './menu_3.jpg'
 import menu_4 from './menu_4.jpg'
 import menu_5 from './menu_5.jpg'
 import head_video_1 from './head_video_1.mp4'
+import h1_img from './h1_img.png'
+import h2_img from './h2_img.png'
+import h3_img from './h3_img.png'
+
 
 
 import dahi from './Dairy/dahi.jpg'
@@ -106,7 +110,10 @@ export const assets = {
     logout_icon,
     bag_icon,
     parcel_icon,
-    head_video_1
+    head_video_1,
+    h1_img,
+    h2_img,
+    h3_img,
 }
 
 export const menu_list = [

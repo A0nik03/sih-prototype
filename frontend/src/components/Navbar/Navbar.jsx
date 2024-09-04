@@ -28,8 +28,8 @@ const Navbar = () => {
   <Link to='/'><img className='logo' src = "./logo.png" alt="Logo" /></Link>
   <ul className="navbar-menu">
     <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>
-    <a href='#explore-menu' onClick={() => setMenu("menu")} className={`${menu === "menu" ? "active" : ""}`}>Menu</a>
     <a href='#farmer-menu' onClick={() => setMenu("farmer-menu")} className={`${menu === "farmer-menu" ? "active" : ""}`}>Farmers Nearby</a>
+    <a href='#howitsworks' onClick={() => setMenu("howitsworks")} className={`${menu === "howitsworks" ? "active" : ""}`}>HOW ITS WORKS</a>
     <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact Us</a>
   </ul>
   <div className="navbar-right">
