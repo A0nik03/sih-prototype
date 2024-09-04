@@ -6,8 +6,20 @@
     justify-content: flex-start;
     padding: 20px;
     box-sizing: border-box;
-    border-radius: 50px; 
+    border-radius: 50px;
 }
+
+.orders-summary {
+    padding: 20px;
+    margin: 20px 0;
+    height: 100vh;
+    width: 100%;
+    border-radius: 15px;
+    background: #f3e3c5;
+    box-shadow: inset 29px 29px 59px #cfc1a7,
+                inset -29px -29px 59px #ffffe3;
+}
+
 
 .my-orders .container {
     display: flex;
