@@ -10,8 +10,8 @@ const Header = () => {
                 Your browser does not support the video tag.
             </video>
             <div className='header-contents'>
-                <h2>Order your favourite food here</h2>
-                <p>Choose from a diverse menu featuring a delectable array of dishes crafted with the finest ingredients and culinary expertise. Our mission is to satisfy your cravings and elevate your dining experience, one delicious meal at a time.</p>
+                <h2>Order Farm Fresh To Home</h2>
+                <p>Get the freshest goods delivered directly from farmers to your doorstep or business. Whether you're a customer or a retailer, enjoy top-quality fruits, vegetables, grains, and more at unbeatable prices, straight from the farm to you.</p>
             </div>
         </div>
     );
