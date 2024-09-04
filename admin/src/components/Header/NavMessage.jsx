@@ -1,5 +1,19 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
+
 function NavMessage() {
+  const [messages, setMessages] = useState([]);
+  const [unreadCount, setUnreadCount] = useState(0);
+
+  useEffect(() => {
+    axios.get('http://localhost:4000/api/message')
+      .then(response => {
+        setMessages(response.data);
+        setUnreadCount(response.data.filter(msg => !msg.read).length);
+      })
+      .catch(error => console.error('Error fetching messages:', error));
+  }, []);
+
   return (
     <li className='nav-item dropdown'>
       <button
@@ -10,58 +24,42 @@ function NavMessage() {
         aria-label="Messages"
       >
         <i className='bi bi-chat-left-text'></i>
-        <span className='badge bg-success badge-number'>3</span>
+        {unreadCount > 0 && <span className='badge bg-success badge-number'>{unreadCount}</span>}
       </button>
 
       {/* Dropdown Menu */}
       <ul className='dropdown-menu dropdown-menu-end dropdown-menu-arrow messages'>
         {/* Dropdown Header */}
-        <li className='dropdown-header'>
-          <a href="#view-all" className='btn btn-primary'>
-            <span className='badge rounded-pill bg-primary p-2 ms-2'>View all</span>
-          </a>
-        </li>
         <li>
           <hr className='dropdown-divider'/>
         </li>
 
-        {/* Message Item 1 */}
-        <li className='message-item'>
-          <a href="#message-1" className='d-flex align-items-center'>
-            <img
-              src="assets/img/messages-1.jpg"
-              alt="Message from Rakesh Kumar"
-              className='rounded-circle'
-            />
-            <div className='ms-3'>
-              <h4>Rakesh Kumar</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing...</p>
-              <p className='small text-muted'>4 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr className='dropdown-divider'/>
-        </li>
-
-        {/* Message Item 2 */}
-        <li className='message-item'>
-          <a href="#message-2" className='d-flex align-items-center'>
-            <img
-              src="assets/img/messages-2.jpg"
-              alt="Message from Hemant Chaudhary"
-              className='rounded-circle'
-            />
-            <div className='ms-3'>
-              <h4>Hemant Chaudhary</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing...</p>
-              <p className='small text-muted'>6 hrs. ago</p>
-            </div>
-          </a>
-        </li>
-        <li>
-          <hr className='dropdown-divider'/>
-        </li>
+        {/* Render Messages */}
+        {messages.length > 0 ? (
+          messages.map((msg, index) => (
+            <React.Fragment key={msg.id}>
+              <li className='message-item'>
+                <a href={`#message-${msg.id}`} className='d-flex align-items-center'>
+                  <img
+                    src={msg.image || 'assets/img/default-profile.jpg'} // Fallback image
+                    alt={`Message from ${msg.sender}`}
+                    className='rounded-circle'
+                  />
+                  <div className='ms-3'>
+                    <h4>{msg.sender}</h4>
+                    <p>{msg.content}</p>
+                    <p className='small text-muted'>{new Date(msg.timestamp).toLocaleTimeString()}</p>
+                  </div>
+                </a>
+              </li>
+              {index < messages.length - 1 && <li><hr className='dropdown-divider'/></li>}
+            </React.Fragment>
+          ))
+        ) : (
+          <li className='message-item'>
+            <p className='text-center'>Can I get a bit more discount?</p>
+          </li>
+        )}
 
         {/* Dropdown Footer */}
         <li className='dropdown-footer'>

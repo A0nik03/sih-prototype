@@ -8,6 +8,7 @@ import cartRouter from "./routes/cartRoute.js"
 import orderRouter from "./routes/orderRoute.js"
 import geocodeRoute from "./routes/geocodeRoute.js"
 import adminRouter from './routes/adminRouter.js'
+import negotiationRoutes from './routes/negotiationRoutes.js';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
@@ -33,6 +34,7 @@ app.use("/api/food", foodRouter)
 app.use("/images",express.static('uploads'))
 app.use("/api/cart", cartRouter)
 app.use("/api/order",orderRouter)
+app.use('/api/negotiation', negotiationRoutes);
 app.use("/api",geocodeRoute)
 app.use('/api', adminRouter);
 

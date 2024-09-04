@@ -1,12 +1,11 @@
 import React from 'react';
 import './Sidebar.css';
-import { NavLink } from 'react-router-dom'; // Import NavLink for routing
+import { NavLink } from 'react-router-dom';
 
 function Sidebar() {
   return (
     <aside id="sidebar" className="sidebar">
       <ul className="sidebar-nav" id="sidebar-nav">
-        {/* Dashboard */}
         <li className="nav-item">
           <a href="#dashboard" className="nav-link">
             <i className="bi bi-grid"></i>
@@ -14,7 +13,12 @@ function Sidebar() {
           </a>
         </li>
 
-        {/* Add Items */}
+        <li className="nav-item">
+          <NavLink to="/nego" className="nav-link">
+            <span>Negotiation Proposal</span>
+          </NavLink>
+        </li>
+
         <li className="nav-item">
           <NavLink to="/add" className="nav-link">
             <span>Add Items</span>

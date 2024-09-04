@@ -9,6 +9,7 @@ const FarmerDetailPage = () => {
   const { id } = useParams();
   const { farmers_list } = useContext(StoreContext);
   const [farmer, setFarmer] = useState(null);
+  const [category,setCategory] = useState("All")
 
   useEffect(() => {
     const fetchFarmer = () => {
@@ -46,11 +47,11 @@ const FarmerDetailPage = () => {
             <h2>Crops:</h2>
             {crops && crops.length > 0 ? (
               <div className='farmer-detail-crops-list'>
-                {crops.map((crop, index) => (
-                  <div key={index} className='farmer-detail-crop-item'>
-                    {crop}
-                  </div>
-                ))}
+                {crops[0].split(',').map((crop, index) => (
+              <div key={index} className="farmer-card__crops-item">
+                {crop.trim()}
+              </div>
+            ))}
               </div>
             ) : (
               <p>No crops listed</p>
@@ -62,8 +63,8 @@ const FarmerDetailPage = () => {
           </div>
         </div>
       </div>
-      <ExploreMenu category="All" setCategory={() => {}} />
-      <FoodDisplay category="All" />
+      <ExploreMenu setCategory={setCategory} category={category}/>
+      <FoodDisplay category={category}/>
     </div>
   );
 };

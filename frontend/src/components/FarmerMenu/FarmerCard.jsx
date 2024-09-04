@@ -1,16 +1,16 @@
 import React, { useContext } from 'react';
-import { useNavigate } from 'react-router-dom'; // Updated import
+import { useNavigate } from 'react-router-dom'; 
 import './FarmerCard.css';
 import { StoreContext } from '../../Context/StoreContext';
 
 const FarmerCard = ({ farmer }) => {
   const { url } = useContext(StoreContext);
-  const navigate = useNavigate(); // Hook for navigation
+  const navigate = useNavigate(); 
 
   const { _id, name, crops, profilePicture } = farmer;
 
   const handleClick = () => {
-    navigate(`/farmer/${_id}`); // Navigate to the farmer detail page
+    navigate(`/farmer/${_id}`); 
   };
 
   const defaulImage = "https://img.freepik.com/free-vector/isolated-young-handsome-man-different-poses-white-background-illustration_632498-855.jpg?t=st=1725366622~exp=1725370222~hmac=e8817b3b3de3b59564b1ee5d49f68df0061a51e8c609dc0161e00998ffc17cde&w=740";

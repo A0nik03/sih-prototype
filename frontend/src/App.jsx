@@ -13,6 +13,7 @@ import Loader from './components/Loader/Loader';
 import 'react-toastify/dist/ReactToastify.css';
 import FarmerDetailPage from './components/FarmerDetailPage/FarmerDetailPage';
 import FarmerMenu from './components/FarmerMenu/FarmerMenu';
+import NegotiationWindow from './components/NegotiationWindow/NegotiationWindow';
 
 const App = () => {
   const location = useLocation();
@@ -36,6 +37,8 @@ const App = () => {
               <Route path='/login' element={<LoginPage />} />
               <Route path='/farmer-menu' element={<FarmerMenu />} />
               <Route path="/farmer/:id" element={<FarmerDetailPage />} />
+              <Route path="/negotiate" element={<NegotiationWindow/>} />
+              
             </Routes>
             <Footer />
           </>

@@ -49,7 +49,7 @@ const Navbar = () => {
       <div className="navbar-icon profile-icon">
         {!token ? (
           <Link to='/login'>
-            <button>Sign in</button>
+            <img src="./locked_profile.png" alt="" />
           </Link>
         ) : (
           <div className='navbar-profile'>
