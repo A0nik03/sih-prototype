@@ -1,48 +1,60 @@
-
 .negotiation-panel {
-    padding: 20px;
-    border: 1px solid #ddd;
-    background-color: #f9f9f9;
-    max-width: 400px;
-    margin: 10% auto;
-    border-radius: 8px;
-  }
+  padding: 20px;
+  border: 1px solid #6482AD;
+  background-color: #F0F5EB;
+  max-width: 450px;
+  margin: 10% auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-  .negotiation-panel h2 {
-    margin-top: 0;
-  }
+.negotiation-panel h2 {
+  margin-top: 0;
+  color: #6482AD;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
 
-  .negotiation-panel p {
-    margin: 10px 0;
-  }
+.negotiation-panel p {
+  margin: 10px 0;
+  color: #7FA1C3;
+}
 
-  .negotiation-panel .buttons {
-    display: flex;
-    justify-content: space-between;
-  }
+.negotiation-panel .buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
 
-  .negotiation-panel button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
+.negotiation-panel button {
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #7FA1C3;
+  color: white;
+  font-weight: bold;
+}
 
-  .negotiation-panel button:hover {
-    background-color: #ddd;
-  }
+.negotiation-panel button:hover {
+  background-color: #6482AD;
+}
 
-  .discount-section {
-    margin: 20px 0;
-  }
+.discount-section {
+  margin: 20px 0;
+}
 
-  .discount-section label {
-    display: block;
-    margin-bottom: 5px;
-  }
+.discount-section label {
+  display: block;
+  margin-bottom: 5px;
+  color: #6482AD;
+}
 
-  .discount-section input {
-    padding: 8px;
-    width: 100%;
-    box-sizing: border-box;
-  }
+.discount-section input {
+  padding: 8px;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #7FA1C3;
+  border-radius: 4px;
+  background-color: #F5EDED;
+}

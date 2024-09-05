@@ -1,19 +1,12 @@
 import express from 'express';
-import {
-  getNegotiationDetails,
-  submitProposal,
-  sendMessage,
-  updateProposalStatus
-} from '../controllers/negotiationController.js';
+import { getNegotiationDetails, submitProposal, sendMessage, getMessages, updateProposalStatus } from '../controllers/negotiationController.js';
 
 const router = express.Router();
 
-router.get('/:itemId', getNegotiationDetails);
 
 router.post('/proposal', submitProposal);
-
-router.post('/message', sendMessage);
-
-router.post('/updateStatus', updateProposalStatus);
+router.post('/messages', sendMessage);
+router.get('/messages', getMessages);
+router.put('/status', updateProposalStatus);
 
 export default router;

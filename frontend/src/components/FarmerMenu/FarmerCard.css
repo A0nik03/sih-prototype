@@ -3,6 +3,7 @@
   overflow-x: auto;
   padding: 20px 0;
   gap: 20px;
+  background-color: #f7f7f7; /* Light background to highlight the cards */
 }
 
 .farmer-card {
@@ -10,22 +11,23 @@
   height: 400px;
   margin: auto;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px #00000015;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for a cleaner look */
   padding: 20px;
   background-color: #fff;
-  transition: 0.3s;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
 .farmer-card:hover {
-  transform: scale(1.02);
+  transform: scale(1.05); /* Slightly bigger hover effect */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
 .farmer-card__profile-picture {
   text-align: center;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .farmer-card__profile-picture img {
@@ -35,30 +37,53 @@
   object-fit: cover;
   display: block;
   margin: 0 auto;
+  border: 4px solid #7FA1C3; /* Border color matching the theme */
 }
 
 .farmer-card__name {
-  font-size: 16px;
-  margin-bottom: 10px;
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 12px;
+  color: #333;
 }
 
 .farmer-card__crops {
-  margin-top: 10px;
+  margin-top: 15px;
+  text-align: center;
 }
 
 .farmer-card__crops-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 6px;
-  border-top: 1px solid #ddd;
-  padding-top: 10px;
+  gap: 8px;
+  border-top: 1px solid #e0e0e0;
+  padding-top: 12px;
+  justify-content: center;
 }
 
 .farmer-card__crops-item {
-  background-color: #f0f0f0;
+  background-color: #E2DAD6;
   padding: 10px;
-  border-radius: 5px;
+  border-radius: 10px;
   font-size: 14px;
-  color: #333;
+  color: #4a4a4a;
+}
+
+.farmer-card__crops-item:hover {
+  background-color: #6482AD; /* On hover, changes to the primary color */
+  color: #fff; /* Text turns white on hover */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .farmer-cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .farmer-card {
+    width: 100%;
+    max-width: 320px; /* Limit width on mobile screens */
+  }
 }
