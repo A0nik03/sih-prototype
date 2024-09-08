@@ -29,7 +29,7 @@ const Navbar = () => {
   <ul className="navbar-menu">
     <Link to="/" onClick={() => setMenu("home")} className={`${menu === "home" ? "active" : ""}`}>Home</Link>
     <a href='#farmer-menu' onClick={() => setMenu("farmer-menu")} className={`${menu === "farmer-menu" ? "active" : ""}`}>Farmers Nearby</a>
-    <a href='#howitsworks' onClick={() => setMenu("howitsworks")} className={`${menu === "howitsworks" ? "active" : ""}`}>HOW ITS WORKS</a>
+    <a href='#howitsworks' onClick={() => setMenu("howitsworks")} className={`${menu === "howitsworks" ? "active" : ""}`}>How It Works</a>
     <a href='#footer' onClick={() => setMenu("contact")} className={`${menu === "contact" ? "active" : ""}`}>Contact Us</a>
   </ul>
   <div className="navbar-right">
