@@ -23,13 +23,16 @@ const __dirname = dirname(__filename);
 
 // middlewares
 app.use(express.json())
-app.use(cors(
-{
-  origin:["https://farmroot-backend.vercel.app/"],
-  methods: ["POST","GET"],
-  credentials:true
-}
-));
+app.use(cors({
+  origin: [
+    "https://farmroot-backend.vercel.app",
+    "https://farmroot-backend-git-main-bhanu-pratap-singhs-projects-370d22c7.vercel.app",
+    "https://farmroot-backend-kuinb4ef6.vercel.app"
+  ],
+  methods: ["POST", "GET"],
+  credentials: true
+}));
+
 
 // db connection
 connectDB()
