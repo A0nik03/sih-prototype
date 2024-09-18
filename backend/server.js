@@ -19,9 +19,17 @@ const port = process.env.PORT || 4000;
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
+
+
 // middlewares
 app.use(express.json())
-app.use(cors())
+app.use(cors(
+{
+  origin:["https://farmroot-backend.vercel.app/"],
+  methods: ["POST","GET"],
+  credentials:true
+}
+));
 
 // db connection
 connectDB()
